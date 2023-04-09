@@ -1,0 +1,86 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://scripts/Main.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Title.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Intro.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Ending.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Scoreboard.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/Stages1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/Stages2.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/Stages3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/Settings.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Select.tscn" type="PackedScene" id=11]
+[ext_resource path="res://movie/credits2.webm" type="VideoStream" id=12]
+[ext_resource path="res://movie/Gunma Symphony Orchestra_林克昌_萧亦庆-The Yellow River Piano Concerto_ II. Ode to the Yellow River.mp3" type="AudioStream" id=13]
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Title" parent="." instance=ExtResource( 2 )]
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="Intro" parent="." instance=ExtResource( 3 )]
+visible = false
+
+[node name="Stage1" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="Stage2" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="Stage3" parent="." instance=ExtResource( 9 )]
+visible = false
+
+[node name="Ending" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="HUD" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="Settings" parent="." instance=ExtResource( 10 )]
+visible = false
+
+[node name="Scoreboard" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="Select" parent="." instance=ExtResource( 11 )]
+visible = false
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+visible = false
+margin_right = 1272.0
+margin_bottom = 720.0
+stream = ExtResource( 12 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+autoplay = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="credits" from="Title" to="." method="_on_Title_credits"]
+[connection signal="score" from="Title" to="." method="_on_Title_score"]
+[connection signal="select" from="Title" to="." method="_on_Title_select"]
+[connection signal="settings" from="Title" to="." method="_on_Title_settings"]
+[connection signal="start" from="Title" to="." method="_on_Title_start"]
+[connection signal="timer_start" from="Intro" to="." method="_on_Intro_timer_start"]
+[connection signal="next_stage" from="Stage1" to="." method="_on_Stage1_next_stage"]
+[connection signal="next_stage" from="Stage2" to="." method="_on_Stage2_next_stage"]
+[connection signal="next_stage" from="Stage3" to="." method="_on_Stage3_next_stage"]
+[connection signal="end" from="Ending" to="." method="_on_Ending_end"]
+[connection signal="save_score" from="Ending" to="." method="_on_Ending_save_score"]
+[connection signal="show_settings" from="HUD" to="." method="_on_HUD_show_settings"]
+[connection signal="back" from="Settings" to="." method="_on_Settings_back"]
+[connection signal="change_sound" from="Settings" to="." method="_on_Settings_change_sound"]
+[connection signal="clean_record" from="Settings" to="." method="_on_Settings_clean_record"]
+[connection signal="credits" from="Settings" to="." method="_on_Settings_credits"]
+[connection signal="return_title" from="Settings" to="." method="_on_Settings_return_title"]
+[connection signal="quit_scoreboard" from="Scoreboard" to="." method="_on_Scoreboard_quit_scoreboard"]
+[connection signal="select_1" from="Select" to="." method="_on_Select_select_1"]
+[connection signal="select_2" from="Select" to="." method="_on_Select_select_2"]
+[connection signal="select_3" from="Select" to="." method="_on_Select_select_3"]
+[connection signal="select_4" from="Select" to="." method="_on_Select_select_4"]
+[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]

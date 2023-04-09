@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Gunma Symphony Orchestra_林克昌_萧亦庆-The Yellow River Piano Concerto_ II. Ode to the Yellow River.mp3-e271eb6c5552b3e0fe0706ce467e2381.mp3str"
+
+[deps]
+
+source_file="res://movie/Gunma Symphony Orchestra_林克昌_萧亦庆-The Yellow River Piano Concerto_ II. Ode to the Yellow River.mp3"
+dest_files=[ "res://.import/Gunma Symphony Orchestra_林克昌_萧亦庆-The Yellow River Piano Concerto_ II. Ode to the Yellow River.mp3-e271eb6c5552b3e0fe0706ce467e2381.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
