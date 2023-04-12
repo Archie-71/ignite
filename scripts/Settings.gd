@@ -6,6 +6,7 @@ signal change_sound
 signal credits
 signal return_title
 signal clean_record
+signal change_lang
 
 
 func _on_Button2_pressed():
@@ -26,3 +27,7 @@ func _on_Button5_pressed():
 
 func _on_Button_pressed():
 	emit_signal("clean_record")
+
+
+func _on_Button6_pressed():
+	emit_signal("change_lang")

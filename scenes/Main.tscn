@@ -74,6 +74,7 @@ autoplay = true
 [connection signal="save_score" from="Ending" to="." method="_on_Ending_save_score"]
 [connection signal="show_settings" from="HUD" to="." method="_on_HUD_show_settings"]
 [connection signal="back" from="Settings" to="." method="_on_Settings_back"]
+[connection signal="change_lang" from="Settings" to="." method="_on_Settings_change_lang"]
 [connection signal="change_sound" from="Settings" to="." method="_on_Settings_change_sound"]
 [connection signal="clean_record" from="Settings" to="." method="_on_Settings_clean_record"]
 [connection signal="credits" from="Settings" to="." method="_on_Settings_credits"]

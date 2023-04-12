@@ -1,13 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://scripts/Settings.gd" type="Script" id=1]
-[ext_resource path="res://fonts/CENSCBK.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Settings.tres" type="DynamicFont" id=2]
 [ext_resource path="res://themes/text_theme.tres" type="Theme" id=3]
 [ext_resource path="res://themes/menu_theme.tres" type="Theme" id=4]
-
-[sub_resource type="DynamicFont" id=1]
-size = 80
-font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=13]
 bg_color = Color( 1, 0.403922, 0.364706, 1 )
@@ -59,52 +55,60 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -153.0
-margin_top = -260.0
-margin_right = 153.0
-margin_bottom = 260.0
+margin_left = -212.0
+margin_top = -328.0
+margin_right = 212.0
+margin_bottom = 328.0
 rect_pivot_offset = Vector2( -688, 56 )
 theme = ExtResource( 4 )
 
 [node name="Title" type="Label" parent="IntroBack/Panel/VBoxContainer"]
-margin_right = 306.0
+margin_right = 424.0
 margin_bottom = 97.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Settings"
+custom_fonts/font = ExtResource( 2 )
+text = "SETTINGS"
 align = 1
 
 [node name="Button3" type="Button" parent="IntroBack/Panel/VBoxContainer"]
 margin_top = 122.0
-margin_right = 306.0
+margin_right = 424.0
 margin_bottom = 186.0
 rect_min_size = Vector2( 0, 64 )
 size_flags_vertical = 0
 theme = ExtResource( 4 )
-text = "Sound: ON"
+text = "SOUND1"
 
 [node name="Button2" type="Button" parent="IntroBack/Panel/VBoxContainer"]
 margin_top = 211.0
-margin_right = 306.0
+margin_right = 424.0
 margin_bottom = 275.0
 rect_min_size = Vector2( 0, 64 )
 size_flags_vertical = 0
 theme = ExtResource( 4 )
-text = "Back"
+text = "SBUTTON1"
 
 [node name="Button4" type="Button" parent="IntroBack/Panel/VBoxContainer"]
 margin_top = 300.0
-margin_right = 306.0
+margin_right = 424.0
 margin_bottom = 364.0
 rect_min_size = Vector2( 0, 64 )
 size_flags_vertical = 0
 theme = ExtResource( 4 )
-text = "Credits"
+text = "SBUTTON2"
+
+[node name="Button6" type="Button" parent="IntroBack/Panel/VBoxContainer"]
+margin_top = 389.0
+margin_right = 424.0
+margin_bottom = 453.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_vertical = 0
+text = "SBUTTON3"
 
 [node name="Button5" type="Button" parent="IntroBack/Panel/VBoxContainer"]
-margin_top = 389.0
-margin_right = 306.0
-margin_bottom = 453.0
+margin_top = 478.0
+margin_right = 424.0
+margin_bottom = 542.0
 rect_min_size = Vector2( 0, 64 )
 size_flags_vertical = 0
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
@@ -116,12 +120,14 @@ custom_styles/hover = SubResource( 13 )
 custom_styles/pressed = SubResource( 14 )
 custom_styles/focus = SubResource( 15 )
 custom_styles/normal = SubResource( 16 )
-text = "Return Title"
+text = "SBUTTON4"
 
 [node name="Button" type="Button" parent="IntroBack/Panel/VBoxContainer"]
-margin_top = 478.0
-margin_right = 306.0
-margin_bottom = 533.0
+margin_top = 567.0
+margin_right = 424.0
+margin_bottom = 631.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_vertical = 0
 custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
 custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
@@ -131,10 +137,11 @@ custom_styles/hover = SubResource( 9 )
 custom_styles/pressed = SubResource( 10 )
 custom_styles/focus = SubResource( 12 )
 custom_styles/normal = SubResource( 11 )
-text = "Clean Record"
+text = "SBUTTON5"
 
 [connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button6" to="." method="_on_Button6_pressed"]
 [connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button5" to="." method="_on_Button5_pressed"]
 [connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button" to="." method="_on_Button_pressed"]

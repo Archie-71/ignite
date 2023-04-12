@@ -3,5 +3,5 @@
 [ext_resource path="res://fonts/CENSCBK.TTF" type="DynamicFontData" id=1]
 
 [resource]
-size = 29
+size = 26
 font_data = ExtResource( 1 )

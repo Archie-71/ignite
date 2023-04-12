@@ -1,0 +1,69 @@
+key,en,zh
+TITLE1,New Game,新的征程
+TITLE2,Select Stage,章节选择
+TITLE3,Scoreboard,历史记录
+TITLE4,Settings,游戏设置
+TITLE5,Credits,制作人员
+TITLE6,Exit,退出游戏
+INTRO,Introduction,简介
+INTROTEXT1,"--""History can know the rise and fall.""","--“以史为鉴，可以知兴替。”"
+INTROTEXT2,"The Communist Party of China has a very magnificent
+party history, and in order to learn the rise and fall, you need to:
+*1. find out what corresponds to the photo 
+*2. complete some short questions. 
+After you press the button, the timer will start, good luck!","在百年奋斗历程中，我们党领导人民取得了举世瞩目的辉煌成就，
+书写了波澜壮阔的历史画卷，留下了弥足珍贵的宝贵经验和精神财富。
+为了更好的学习党史，你需要完成以下内容：
+1.找出与照片相对应的物品
+2.完成章节后简短的问题"
+ACQUIRE,Got it.,确定
+HINTTEXT,-Find the following items in the picture...,请找出上图中和右侧对应的物品...
+STAGE1TEXT1,"At the Paris Peace Conference, *China's
+diplomatic failure* was one of the triggers
+of the May Fourth Movement.","在巴黎和会上，中国的外交失败是五四运动
+爆发的导火索之一。"
+STAGE1TEXT2,"The early participants of the Fourth
+Movement were mainly *college students*.",五四运动前期的主要参与者是大学生。
+QUESTION,Stage Complete,关卡通过
+QLABEL,Your Answer: ,答∶
+QBUTTON1,Try Again,重试
+QBUTTON2,Next Stage,下一关
+STAGE1QUESTION1,"Question1: Who are the early main participants
+of the May Fourth Movement?",五四运动早期的主要参与者是哪些人？
+STAGE1QUESTION2,"Question2: What causes the May Fourth
+Movement?",是什么造成了五四运动的爆发？
+STAGE2TEXT1,"*Mao Zedong*, as a representative of
+Hunan Province, participated in the First
+Congress of the Communist Party of China.",毛泽东作为湖南省的代表，参与了中共一大。
+STAGE2TEXT2,The Chinese Communist Party was founded in *July 1921*.,中国共产党在1921年7月建立。
+STAGE2QUESTION1,"Question1: Who's the representative of
+Hunan Province in the First Congress of the CPC?",谁是中共一大的湖南省代表？
+STAGE2QUESTION2,Question2: Which years was CPC found?,中国共产党的建立时间是哪一年？
+STAGE3TEXT1,"*Ms. Wang Huiwu* pretended to be a tourist standing at
+the bow of the boat to cover for the meeting.",王会悟女士假装是一名游客，站在船头以掩护会议。
+STAGE3TEXT2,"*The first resolution* of the Chinese
+Communist Party on the organization of
+the workers' movement.",中国共产党的第一个决议是组织工人运动。
+STAGE3QUESTION1,Question1: Who's the women on the red boat?,在红船上的女性是谁？
+STAGE3QUESTION2,Question2: What is it in her hands?,在她手里的是什么？
+ENDTITLE,The End,游戏通关
+ENDTEXT1,Please Enter Your Name:,请输入您的名字：
+ENDTEXT2,Ignite a spark.,星火燎原
+SAVE,Save,保存
+HUD1,^Time Spent:,耗时：
+HUD2,`Settings,设置
+SETTINGS,Settings,设置
+SOUND1,Sound: ON,音乐：开
+SOUND2,Sound: OFF,音乐：关
+SBUTTON1,Back,返回游戏
+SBUTTON2,Credits,制作人员
+SBUTTON3,Language,切换语言
+SBUTTON4,Return Titile,返回菜单
+SBUTTON5,Clean Record,清除记录
+SCOREBOARD,Scoreboard,历史记录
+QUIT,Quit,退出
+SELECT,History,章节选择
+STAGE1,-Stage1-,-第一章-
+STAGE2,-Stage2-,-第二章-
+STAGE3,-Stage3-,-第三章-
+BACK,-Back-,-返回菜单-

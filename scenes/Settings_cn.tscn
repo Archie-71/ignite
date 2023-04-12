@@ -1,0 +1,158 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://fonts/SourceHanSans-Medium.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/Settings.gd" type="Script" id=2]
+[ext_resource path="res://themes/menu_theme.tres" type="Theme" id=3]
+[ext_resource path="res://themes/text_theme.tres" type="Theme" id=4]
+[ext_resource path="res://fonts/chinese_menu.tres" type="DynamicFont" id=5]
+
+[sub_resource type="DynamicFont" id=17]
+size = 64
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=13]
+bg_color = Color( 1, 0.403922, 0.364706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=14]
+bg_color = Color( 0.8, 0.290196, 0.290196, 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.8, 0.290196, 0.290196, 1 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 1, 0.364706, 0.364706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 1, 0.403922, 0.364706, 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.8, 0.290196, 0.290196, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.8, 0.290196, 0.290196, 1 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 1, 0.364706, 0.364706, 1 )
+
+[node name="Settings" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+
+[node name="IntroBack" type="ColorRect" parent="."]
+margin_right = 1270.0
+margin_bottom = 720.0
+color = Color( 0, 0, 0, 0.588235 )
+
+[node name="Panel" type="Panel" parent="IntroBack"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -280.5
+margin_top = -360.0
+margin_right = 280.5
+margin_bottom = 360.0
+theme = ExtResource( 4 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="IntroBack/Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -152.5
+margin_top = -320.0
+margin_right = 153.5
+margin_bottom = 336.0
+rect_pivot_offset = Vector2( -688, 56 )
+theme = ExtResource( 3 )
+
+[node name="Title" type="Label" parent="IntroBack/Panel/VBoxContainer"]
+margin_right = 306.0
+margin_bottom = 94.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 17 )
+text = "游戏设置"
+align = 1
+
+[node name="Button3" type="Button" parent="IntroBack/Panel/VBoxContainer"]
+margin_top = 119.0
+margin_right = 306.0
+margin_bottom = 183.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
+text = "音乐: 开"
+
+[node name="Button2" type="Button" parent="IntroBack/Panel/VBoxContainer"]
+margin_top = 208.0
+margin_right = 306.0
+margin_bottom = 272.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
+text = "返回游戏"
+
+[node name="Button4" type="Button" parent="IntroBack/Panel/VBoxContainer"]
+margin_top = 297.0
+margin_right = 306.0
+margin_bottom = 361.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_vertical = 0
+theme = ExtResource( 3 )
+custom_fonts/font = ExtResource( 5 )
+text = "制作人员"
+
+[node name="Button6" type="Button" parent="IntroBack/Panel/VBoxContainer"]
+margin_top = 386.0
+margin_right = 306.0
+margin_bottom = 450.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_vertical = 0
+custom_fonts/font = ExtResource( 5 )
+text = "切换语言"
+
+[node name="Button5" type="Button" parent="IntroBack/Panel/VBoxContainer"]
+margin_top = 475.0
+margin_right = 306.0
+margin_bottom = 539.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_vertical = 0
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = SubResource( 13 )
+custom_styles/pressed = SubResource( 14 )
+custom_styles/focus = SubResource( 15 )
+custom_styles/normal = SubResource( 16 )
+text = "返回标题"
+
+[node name="Button" type="Button" parent="IntroBack/Panel/VBoxContainer"]
+margin_top = 564.0
+margin_right = 306.0
+margin_bottom = 628.0
+rect_min_size = Vector2( 0, 64 )
+size_flags_vertical = 0
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = ExtResource( 5 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 11 )
+text = "清除记录"
+
+[connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="IntroBack/Panel/VBoxContainer/Button" to="." method="_on_Button_pressed"]

@@ -1,13 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://scripts/Scoreboard.gd" type="Script" id=1]
-[ext_resource path="res://fonts/CENSCBK.TTF" type="DynamicFontData" id=2]
+[ext_resource path="res://fonts/Settings.tres" type="DynamicFont" id=2]
 [ext_resource path="res://themes/text_theme.tres" type="Theme" id=3]
 [ext_resource path="res://themes/button_theme.tres" type="Theme" id=4]
-
-[sub_resource type="DynamicFont" id=1]
-size = 52
-font_data = ExtResource( 2 )
 
 [node name="Scoreboard" type="Control"]
 anchor_right = 1.0
@@ -34,31 +30,31 @@ theme = ExtResource( 3 )
 margin_left = 34.0
 margin_top = 13.0
 margin_right = 880.0
-margin_bottom = 704.0
+margin_bottom = 714.0
 custom_constants/separation = 4
 alignment = 1
 
 [node name="Title" type="Label" parent="IntroBack/Panel/VBoxContainer"]
-margin_top = 11.0
+margin_top = 25.0
 margin_right = 846.0
-margin_bottom = 75.0
+margin_bottom = 122.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Scoreboard"
+custom_fonts/font = ExtResource( 2 )
+text = "SCOREBOARD"
 align = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="IntroBack/Panel/VBoxContainer"]
-margin_top = 79.0
+margin_top = 126.0
 margin_right = 840.0
-margin_bottom = 629.0
-rect_min_size = Vector2( 840, 550 )
+margin_bottom = 626.0
+rect_min_size = Vector2( 840, 500 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="Label" type="Label" parent="IntroBack/Panel/VBoxContainer/ScrollContainer"]
 margin_right = 840.0
-margin_bottom = 621.0
-rect_min_size = Vector2( 840, 0 )
+margin_bottom = 557.0
+rect_min_size = Vector2( 840, 500 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource( 3 )
@@ -82,9 +78,9 @@ Player1: 100p"
 align = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="IntroBack/Panel/VBoxContainer"]
-margin_top = 633.0
+margin_top = 630.0
 margin_right = 846.0
-margin_bottom = 679.0
+margin_bottom = 676.0
 
 [node name="ButtonNext" type="Button" parent="IntroBack/Panel/VBoxContainer/CenterContainer"]
 margin_left = 361.0
@@ -94,6 +90,6 @@ rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource( 4 )
-text = "Quit"
+text = "QUIT"
 
 [connection signal="pressed" from="IntroBack/Panel/VBoxContainer/CenterContainer/ButtonNext" to="." method="_on_ButtonNext_pressed"]

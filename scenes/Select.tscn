@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/Select.gd" type="Script" id=1]
 [ext_resource path="res://images/Stage1.jpg" type="Texture" id=2]
@@ -6,12 +6,8 @@
 [ext_resource path="res://images/Stage3.jpg" type="Texture" id=4]
 [ext_resource path="res://themes/text_theme.tres" type="Theme" id=5]
 [ext_resource path="res://themes/gold_button_theme.tres" type="Theme" id=6]
-[ext_resource path="res://fonts/CENSCBK.TTF" type="DynamicFontData" id=7]
+[ext_resource path="res://fonts/title.tres" type="DynamicFont" id=7]
 [ext_resource path="res://images/stage4.jpg" type="Texture" id=8]
-
-[sub_resource type="DynamicFont" id=1]
-size = 46
-font_data = ExtResource( 7 )
 
 [node name="Select" type="Control"]
 anchor_right = 1.0
@@ -47,16 +43,16 @@ custom_constants/separation = 20
 
 [node name="Title" type="Label" parent="IntroBack/Panel/VBoxContainer"]
 margin_right = 1116.0
-margin_bottom = 56.0
+margin_bottom = 44.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "History"
+custom_fonts/font = ExtResource( 7 )
+text = "SELECT"
 align = 1
 
 [node name="GridContainer" type="GridContainer" parent="IntroBack/Panel/VBoxContainer"]
-margin_top = 76.0
+margin_top = 64.0
 margin_right = 1116.0
-margin_bottom = 670.0
+margin_bottom = 658.0
 rect_pivot_offset = Vector2( -73, 155 )
 custom_constants/vseparation = 50
 custom_constants/hseparation = 100
@@ -85,7 +81,7 @@ rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-text = "-Stage1-"
+text = "STAGE1"
 expand_icon = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="IntroBack/Panel/VBoxContainer/GridContainer"]
@@ -112,7 +108,7 @@ rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-text = "-Stage2-"
+text = "STAGE2"
 expand_icon = true
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="IntroBack/Panel/VBoxContainer/GridContainer"]
@@ -139,7 +135,7 @@ rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-text = "-Stage3-"
+text = "STAGE3"
 expand_icon = true
 
 [node name="VBoxContainer4" type="VBoxContainer" parent="IntroBack/Panel/VBoxContainer/GridContainer"]
@@ -167,7 +163,7 @@ rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 4
 size_flags_vertical = 0
 theme = ExtResource( 6 )
-text = "-Back-"
+text = "BACK"
 expand_icon = true
 
 [connection signal="pressed" from="IntroBack/Panel/VBoxContainer/GridContainer/VBoxContainer/Button" to="." method="_on_Button1_pressed"]

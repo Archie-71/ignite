@@ -16,12 +16,46 @@ boot_splash/bg_color=Color( 0.141176, 0.141176, 0.141176, 1 )
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
 
+[audio]
+
+default_bus_layout=""
+
 [display]
 
 window/size/width=1270
 window/size/height=720
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[locale]
+
+test="en"
+locale_filter=[ 0, [ "en", "zh" ] ]
+translation_remaps={
+"res://fonts/Settings.tres": PoolStringArray( "res://fonts/Settings_cn.tres:zh" ),
+"res://fonts/Settings_cn.tres": PoolStringArray( "res://fonts/Settings.tres:en" ),
+"res://fonts/text_font.tres": PoolStringArray( "res://fonts/text_font_cn.tres:zh" ),
+"res://fonts/text_font_cn.tres": PoolStringArray( "res://fonts/text_font.tres:en" ),
+"res://fonts/title.tres": PoolStringArray( "res://fonts/title_cn.tres:zh" ),
+"res://fonts/title_cn.tres": PoolStringArray( "res://fonts/title.tres:en" ),
+"res://images/Title_en.jpg": PoolStringArray( "res://images/Title_zh.jpg:zh" ),
+"res://images/Title_zh.jpg": PoolStringArray( "res://images/Title_en.jpg:en" ),
+"res://themes/button_theme.tres": PoolStringArray( "res://themes/button_theme_cn.tres:zh" ),
+"res://themes/button_theme_cn.tres": PoolStringArray( "res://themes/button_theme.tres:en" ),
+"res://themes/gold_button_theme.tres": PoolStringArray( "res://themes/gold_button_theme_cn.tres:zh" ),
+"res://themes/gold_button_theme_cn.tres": PoolStringArray( "res://themes/gold_button_theme.tres:en" ),
+"res://themes/hint_theme.tres": PoolStringArray( "res://themes/hint_theme_cn.tres:zh" ),
+"res://themes/hint_theme_cn.tres": PoolStringArray( "res://themes/hint_theme.tres:en" ),
+"res://themes/intro_theme.tres": PoolStringArray( "res://themes/intro_theme_cn.tres:zh" ),
+"res://themes/intro_theme_cn.tres": PoolStringArray( "res://themes/intro_theme.tres:en" ),
+"res://themes/menu_theme.tres": PoolStringArray( "res://themes/menu_theme_cn.tres:zh" ),
+"res://themes/menu_theme_cn.tres": PoolStringArray( "res://themes/menu_theme.tres:en" ),
+"res://themes/text_theme.tres": PoolStringArray( "res://themes/text_theme_cn.tres:zh" ),
+"res://themes/text_theme_cn.tres": PoolStringArray( "res://themes/text_theme.tres:en" ),
+"res://themes/timesi_theme.tres": PoolStringArray( "res://themes/timesi_theme_cn.tres:zh" ),
+"res://themes/timesi_theme_cn.tres": PoolStringArray( "res://themes/timesi_theme.tres:en" )
+}
+translations=PoolStringArray( "res://lang/translation.en.translation", "res://lang/translation.zh.translation" )
 
 [mono]
 

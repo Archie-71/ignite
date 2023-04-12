@@ -63,6 +63,10 @@ func _process(_delta):
 			thing2_check = false
 			state = states.STATE_START
 
+func answers_check():
+	var answer1_check = (answer1.text.capitalize() == "Mao Zedong")||(answer1.text == "毛泽东")
+	var answer2_check = (answer2.text == "1921")||(answer2.text == "1921年")
+	return answer1_check && answer2_check
 
 func _on_Thing1Found_pressed():
 	thing1_found = true
@@ -87,7 +91,7 @@ func _on_ButtonBack_pressed():
 
 
 func _on_ButtonNext_pressed():
-	if answer1.text.capitalize() == "Mao Zedong" && answer2.text.capitalize() == "1921":
+	if answers_check():
 		emit_signal("next_stage")
 		questions.hide()
 		thing1_complete = false

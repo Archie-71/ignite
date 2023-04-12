@@ -65,7 +65,11 @@ func _process(_delta):
 			
 			
 
-
+func answers_check():
+	var answer1_check = (answer1.text.capitalize() == "College Students")||(answer1.text == "大学生")||(answer1.text == "学生")
+	var answer2_check = (answer2.text.capitalize() == "China's Diplomatic Failure")||(answer2.text == "中国的外交失败")||(answer2.text == "外交失败")
+	return answer1_check && answer2_check
+	
 func _on_Thing1Found_pressed():
 	thing1_found = true
 
@@ -89,7 +93,7 @@ func _on_ButtonBack_pressed():
 
 
 func _on_ButtonNext_pressed():
-	if answer1.text.capitalize() == "College Students" && answer2.text.capitalize() == "China's Diplomatic Failure":
+	if answers_check():
 		emit_signal("next_stage")
 		questions.hide()
 		thing1_complete = false

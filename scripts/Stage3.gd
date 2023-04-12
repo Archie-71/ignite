@@ -62,6 +62,11 @@ func _process(_delta):
 			thing2_found = false
 			thing2_check = false
 			state = states.STATE_START
+			
+func answers_check():
+	var answer1_check = (answer1.text.capitalize() == "Wang Huiwu")||(answer1.text == "王会悟")
+	var answer2_check = (answer2.text.capitalize() == "The First Resolution")||(answer2.text == "第一个决议")||(answer2.text == "决议")
+	return answer1_check && answer2_check
 
 
 func _on_Thing1Found_pressed():
@@ -87,7 +92,7 @@ func _on_ButtonBack_pressed():
 
 
 func _on_ButtonNext_pressed():
-	if answer1.text.capitalize() == "Wang Huiwu" && answer2.text.capitalize() == "The First Resolution":
+	if answers_check():
 		emit_signal("next_stage")
 		questions.hide()
 		thing1_complete = false

@@ -7,13 +7,10 @@
 [ext_resource path="res://images/Stage3.jpg" type="Texture" id=5]
 [ext_resource path="res://images/pic5s.png" type="Texture" id=6]
 [ext_resource path="res://images/pic6.png" type="Texture" id=7]
-[ext_resource path="res://fonts/CENSCBK.TTF" type="DynamicFontData" id=8]
-[ext_resource path="res://themes/text_theme.tres" type="Theme" id=9]
+[ext_resource path="res://fonts/title.tres" type="DynamicFont" id=8]
+[ext_resource path="res://themes/intro_theme.tres" type="Theme" id=9]
 [ext_resource path="res://themes/button_theme.tres" type="Theme" id=10]
-
-[sub_resource type="DynamicFont" id=1]
-size = 36
-font_data = ExtResource( 8 )
+[ext_resource path="res://themes/hint_theme.tres" type="Theme" id=11]
 
 [node name="Stage" type="Control"]
 script = ExtResource( 2 )
@@ -60,8 +57,9 @@ theme = ExtResource( 9 )
 margin_top = 8.0
 margin_right = 632.0
 margin_bottom = 44.0
+theme = ExtResource( 11 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "-Find the following items in the picture..."
+text = "HINTTEXT"
 align = 1
 
 [node name="TextureRect" type="TextureRect" parent="HintDialog"]
@@ -99,18 +97,17 @@ margin_bottom = 136.0
 alignment = 1
 
 [node name="ThingText" type="Label" parent="Thing1Dialog/MarginContainer/VBoxContainer"]
-margin_top = 5.0
+margin_top = 27.0
 margin_right = 776.0
-margin_bottom = 80.0
+margin_bottom = 59.0
 theme = ExtResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "*Ms. Wang Huiwu* pretended to be a tourist standing at
-the bow of the boat to cover for the meeting."
+text = "STAGE3TEXT1"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Thing1Dialog/MarginContainer/VBoxContainer"]
-margin_top = 84.0
+margin_top = 63.0
 margin_right = 776.0
-margin_bottom = 130.0
+margin_bottom = 109.0
 alignment = 2
 
 [node name="ThingCheckButton" type="Button" parent="Thing1Dialog/MarginContainer/VBoxContainer/HBoxContainer"]
@@ -120,7 +117,7 @@ margin_bottom = 46.0
 rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-text = "Got it."
+text = "ACQUIRE"
 
 [node name="ThingPic" type="TextureRect" parent="Thing1Dialog"]
 margin_left = -64.0
@@ -147,19 +144,17 @@ margin_bottom = 184.0
 alignment = 1
 
 [node name="ThingText" type="Label" parent="Thing2Dialog/MarginContainer/VBoxContainer"]
-margin_top = 10.0
+margin_top = 51.0
 margin_right = 560.0
-margin_bottom = 124.0
+margin_bottom = 83.0
 theme = ExtResource( 10 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "*The first resolution* of the Chinese
-Communist Party on the organization of
-the workers’ movement."
+text = "STAGE3TEXT2"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Thing2Dialog/MarginContainer/VBoxContainer"]
-margin_top = 128.0
+margin_top = 87.0
 margin_right = 560.0
-margin_bottom = 174.0
+margin_bottom = 133.0
 alignment = 2
 
 [node name="ThingCheckButton" type="Button" parent="Thing2Dialog/MarginContainer/VBoxContainer/HBoxContainer"]
@@ -169,7 +164,7 @@ margin_bottom = 46.0
 rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
-text = "Got it."
+text = "ACQUIRE"
 
 [node name="ThingPic" type="TextureRect" parent="Thing2Dialog"]
 margin_left = -48.0
@@ -221,32 +216,32 @@ margin_bottom = 292.0
 margin_right = 640.0
 margin_bottom = 44.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 1 )
-text = "Stage Complete"
+custom_fonts/font = ExtResource( 8 )
+text = "QUESTION"
 align = 1
 
 [node name="Questions" type="Label" parent="StageQuestions/Panel/VBoxContainer"]
 margin_top = 48.0
 margin_right = 640.0
-margin_bottom = 84.0
+margin_bottom = 85.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Question1: Who's the women on the red boat?"
+text = "STAGE3QUESTION1"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="StageQuestions/Panel/VBoxContainer"]
-margin_top = 88.0
+margin_top = 89.0
 margin_right = 640.0
-margin_bottom = 125.0
+margin_bottom = 127.0
 
 [node name="Label" type="Label" parent="StageQuestions/Panel/VBoxContainer/HBoxContainer"]
-margin_right = 193.0
-margin_bottom = 36.0
+margin_right = 129.0
+margin_bottom = 37.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Your Answer: "
+text = "QLABEL"
 
 [node name="LineEdit" type="LineEdit" parent="StageQuestions/Panel/VBoxContainer/HBoxContainer"]
-margin_left = 197.0
+margin_left = 133.0
 margin_right = 640.0
-margin_bottom = 37.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 theme = ExtResource( 9 )
 custom_colors/selection_color = Color( 0.313726, 0.313726, 0.313726, 1 )
@@ -258,27 +253,27 @@ custom_colors/clear_button_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
 
 [node name="Questions2" type="Label" parent="StageQuestions/Panel/VBoxContainer"]
-margin_top = 129.0
+margin_top = 131.0
 margin_right = 640.0
-margin_bottom = 165.0
+margin_bottom = 168.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Question2: What is it in her hands?"
+text = "STAGE3QUESTION2"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="StageQuestions/Panel/VBoxContainer"]
-margin_top = 169.0
+margin_top = 172.0
 margin_right = 640.0
-margin_bottom = 206.0
+margin_bottom = 210.0
 
 [node name="Label" type="Label" parent="StageQuestions/Panel/VBoxContainer/HBoxContainer2"]
-margin_right = 193.0
-margin_bottom = 36.0
+margin_right = 129.0
+margin_bottom = 37.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Your Answer: "
+text = "QLABEL"
 
 [node name="LineEdit" type="LineEdit" parent="StageQuestions/Panel/VBoxContainer/HBoxContainer2"]
-margin_left = 197.0
+margin_left = 133.0
 margin_right = 640.0
-margin_bottom = 37.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 theme = ExtResource( 9 )
 custom_colors/selection_color = Color( 0.313726, 0.313726, 0.313726, 1 )
@@ -290,9 +285,9 @@ custom_colors/clear_button_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_uneditable = Color( 0, 0, 0, 1 )
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="StageQuestions/Panel/VBoxContainer"]
-margin_top = 210.0
+margin_top = 214.0
 margin_right = 640.0
-margin_bottom = 256.0
+margin_bottom = 260.0
 alignment = 2
 
 [node name="ButtonBack" type="Button" parent="StageQuestions/Panel/VBoxContainer/HBoxContainer3"]
@@ -303,7 +298,7 @@ rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource( 10 )
-text = "Try Again"
+text = "QBUTTON1"
 
 [node name="ButtonNext" type="Button" parent="StageQuestions/Panel/VBoxContainer/HBoxContainer3"]
 margin_left = 516.0
@@ -313,7 +308,7 @@ rect_min_size = Vector2( 124, 46 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource( 10 )
-text = "Next Stage"
+text = "QBUTTON2"
 
 [connection signal="pressed" from="MarginContainer/StageImage/Thing1Found" to="." method="_on_Thing1Found_pressed"]
 [connection signal="pressed" from="MarginContainer/StageImage/Thing2Found" to="." method="_on_Thing2Found_pressed"]

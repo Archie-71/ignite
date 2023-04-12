@@ -27,6 +27,7 @@ var is_select_mode
 var time_spent = 0
 
 func _ready():
+	TranslationServer.set_locale("en")
 	var file = File.new()
 	if file.file_exists("user://scoreboard.dat"):
 		var data = load_scoreboard_data()
@@ -77,6 +78,9 @@ func clean_screen():
 	settings.hide()
 	scoreboard.hide()
 	select_stage.hide()
+	
+func fresh_text():
+	pass
 
 func _on_Title_start():
 	clean_screen()
@@ -115,10 +119,10 @@ func _on_Settings_credits():
 func _on_Settings_change_sound():
 	if bgm.playing:
 		bgm.playing = false
-		settings_sound.text = "Sound: OFF"
+		settings_sound.text = "SOUND2"
 	else:
 		bgm.playing = true
-		settings_sound.text = "Sound: ON"
+		settings_sound.text = "SOUND1"
 
 func _on_Stage1_next_stage():
 	if is_select_mode:
@@ -220,3 +224,10 @@ func _on_Select_select_4():
 func _on_VideoPlayer_finished():
 	video.hide()
 	bgm.stream_paused = false
+
+
+func _on_Settings_change_lang():
+	if TranslationServer.get_locale() == "zh":
+		TranslationServer.set_locale("en")
+	elif TranslationServer.get_locale() == "en":
+		TranslationServer.set_locale("zh")
